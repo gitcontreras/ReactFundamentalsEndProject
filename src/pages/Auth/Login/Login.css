@@ -1,0 +1,38 @@
+h1{
+    color: #FFFFFF;
+}
+
+h5{
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+
+label{
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+
+.login-container
+{
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+input{
+width: 300px;
+height: 40px;
+
+
+background: #5141EA;
+border-radius: 50px;
+margin-top: 15px;
+}
+
+button{
+    background: linear-gradient(102.31deg, rgba(58, 227, 195, 0.61) 12.56%, rgba(78, 108, 228, 0.84358) 85.09%, #563FF0 99.05%);
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 15px;
+    color: #FFFFFF;
+}
