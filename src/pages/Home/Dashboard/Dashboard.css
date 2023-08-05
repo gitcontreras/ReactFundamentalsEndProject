@@ -114,6 +114,13 @@ body {
     border-radius: 10px 10px 10px 10px;
   }
   
+  .character-container .back {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 10px 10px;
+  }
+
   .character-container p {
     font-size: 17px;
     text-align: center;
@@ -171,5 +178,20 @@ body {
    .btn-page
    {
     background:#563FF0;
+    color: #FFFFFF !important;
+   }
+
+   .movie-tittle{
+    color: #FFF;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 127.5%; /* 15.3px */
+   }
+
+
+   .movie-description-text
+   {
     color: #FFFFFF !important;
    }

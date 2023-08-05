@@ -34,11 +34,10 @@ export default function Description(props: { description: any; setDescription: a
         
 
               {isHoveringHere && (
-            <div >
-             <h6>{description.title}</h6>
-             <h6>{description.release_date.substring(0, 4)}</h6>
-             <h6>{description.categories}</h6>
-             <p>{description.overview}</p>
+            <div>
+             <h6 className="movie-tittle">{description.title}</h6>
+             <h6 className="movie-tittle">{description.release_date.substring(0, 4)} - {description.categories}</h6>
+             <p className="movie-description-text">{description.overview}</p>
              <Stars item={description.vote_average}  />
              
               </div>

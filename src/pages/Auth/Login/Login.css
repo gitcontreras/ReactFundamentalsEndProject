@@ -14,11 +14,11 @@ label{
 
 .login-container
 {
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top: 50px;
 }
 
-input{
+.text{
 width: 300px;
 height: 40px;
 
@@ -35,4 +35,22 @@ button{
     border-radius: 50px;
     margin-top: 15px;
     color: #FFFFFF;
+}
+
+.myLabel{
+    color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 24px */
+}
+
+.myAgreement{
+    color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: italic;
+font-weight: 400;
+line-height: 120%; /* 24px */
 }
