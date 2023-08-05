@@ -27,25 +27,29 @@ const Dashboard = memo(() => {
 
   
   useEffect(() => {
+    GetMovies(TypeMovies);
+  }, [genders]);
+
+  useEffect(() => {
     GetMovies(TypeMovies,pageCount)
   }, [pageCount]);
 
 
    const getFeatures =  (array: string | any[]) => {
 
-    if(genders.length==0) 
-    setGenders(ArrayGen);
+    // if(genders.length==0) 
+    // setGenders(ArrayGen);
 
     let categories = ""
-    for (let i = 0; i < array.length; ++i) 
-    {
+    // for (let i = 0; i < array.length; ++i) 
+    // {
       
-       const found = ArrayGen.find(obj => {
-         return obj.id == array[i];
-       });
-       if(found!=null && found!=undefined)
-      categories+=found?.name+" / "
-    }
+    //    const found = ArrayGen.find(obj => {
+    //      return obj.id == array[i];
+    //    });
+    //    if(found!=null && found!=undefined)
+    //   categories+=found?.name+" / "
+    // }
 
     if(categories=="")
     {
