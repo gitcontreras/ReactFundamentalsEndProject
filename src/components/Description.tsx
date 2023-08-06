@@ -1,14 +1,9 @@
-import React, { useState } from "react";
-import StarCompleted from "../assets/images/StarCompleted.png";
-import Start from "./Starts";
+import { useState } from "react";
 import Stars from "./Starts";
 
 export default function Description(props: { description: any; setDescription: any; }) {
-  const { description, setDescription } = props;
+  const { description } = props;
 
-  const resetDescription = () => {
-    setDescription(null);
-  };
 
 //style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/original'+description.poster_path})` }}
   const [isHoveringHere, setIsHoveringHere] = useState(false);

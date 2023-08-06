@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+
 
 interface InputI {
   name: string;
@@ -10,7 +10,7 @@ interface InputI {
   className:string
 }
 
-const Input = ({ name, isUser, placeholder, onChange, value,type, className }: InputI) => {
+const Input = ({ name, isUser, onChange, value,type, className }: InputI) => {
   if (isUser === true) return null;
   return (
     <div>

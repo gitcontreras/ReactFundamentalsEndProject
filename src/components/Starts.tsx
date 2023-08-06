@@ -1,4 +1,4 @@
-import React from "react";
+
 import StarCompleted from "../assets/images/StarCompleted.png";
 import StarEmpty from "../assets/images/StarEmpty.png";
 

@@ -18,6 +18,9 @@ const Login = () => {
     if(validateEmail(e.target.value))
     {
       setEmailStatus(true);
+    }else
+    {
+      setEmailStatus(false);
     }
     setEmail(e.target.value);
   };
@@ -26,11 +29,14 @@ const Login = () => {
     if(validatePassword(e.target.value))
     {
       setPasswordStatus(true)
+    }else
+    {
+      setPasswordStatus(false)
     }
     setPassword(e.target.value);
   };
 
-  const handleChangeAgree = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeAgree = () => {
     setAgree(!Agree);
   };
 
@@ -73,7 +79,7 @@ const Login = () => {
       .request(options)
       .then(function (response) {
         console.log(response.data);
-        const token = response.data.guest_session_id
+        //const token = response.data.guest_session_id
         sessionStorage.setItem("token", response.data.guest_session_id);
         setTimeout(() => {
           navigate('/dashboard',

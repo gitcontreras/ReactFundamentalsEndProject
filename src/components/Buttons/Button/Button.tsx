@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { ButtonI } from "~/types/FormInputs";
 
 const Button = ({ disable, label = "", onClick }: ButtonI) => {

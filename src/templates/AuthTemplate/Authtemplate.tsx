@@ -12,7 +12,7 @@ interface AuthTemplateI {
   title?:string
 }
 
-const Authtemplate = ({ title='', children }: AuthTemplateI) => {
+const Authtemplate = ({ children }: AuthTemplateI) => {
   return (
     <div className="auth-template">
       <div className="navbar">

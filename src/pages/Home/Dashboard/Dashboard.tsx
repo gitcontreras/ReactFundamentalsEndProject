@@ -1,20 +1,17 @@
 import { memo, useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 import Movies from "../../../components/Movies";
 import "./Dashboard.css";
 import Authtemplate from "~/templates/AuthTemplate/Authtemplate";
 import axios from "axios";
 
 const Dashboard = memo(() => {
-  const location = useLocation();
-  const navigate = useNavigate();
+
 
   interface gen {
     id: string;
     name: string;
   }
 
-  let ArrayGen: gen[]=[];
   const [movies, setMovies] = useState(null);
   const [genders, setGenders] =  useState<gen[]>([]);
   const [TypeMovies, setTypeMovies] = useState("now_playing");
@@ -81,7 +78,6 @@ const Dashboard = memo(() => {
     axios
     .request(options)
     .then(function (response) { 
-      ArrayGen=response.data.genres;
       setGenders(response.data.genres);   
     })
     .catch(function (error) {
@@ -106,7 +102,8 @@ const Dashboard = memo(() => {
     .request(options)
     .then(function (response) {
       //console.log(response.data); 
-      const temp= response.data.results.map((res:any, key: any) =>{
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const temp= response.data.results.map((res:any) =>{
         return{
           ...res,
           categories: getFeatures(res.genre_ids),

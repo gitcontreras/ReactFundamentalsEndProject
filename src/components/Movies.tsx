@@ -1,22 +1,10 @@
 import React from "react";
-import { useState } from "react";
+
 import Description from "./Description";
 
 export default function Movies(props: { movies: any; setMovies: any; }) {
   const { movies, setMovies } = props;
 
-  const resetMovies = () => {
-    setMovies(null);
-  };
-
-  const [isHovering, setIsHovering] = useState(true);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
 
 
 
