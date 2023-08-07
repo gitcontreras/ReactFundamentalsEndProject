@@ -16,6 +16,7 @@ const Dashboard = memo(() => {
   const [genders, setGenders] =  useState<gen[]>([]);
   const [TypeMovies, setTypeMovies] = useState("now_playing");
   const [pageCount, setPageCount] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     GetGenders();
@@ -103,6 +104,7 @@ const Dashboard = memo(() => {
     .then(function (response) {
       //console.log(response.data); 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      setTotalPages(response.data.total_pages);
       const temp= response.data.results.map((res:any) =>{
         return{
           ...res,
@@ -167,8 +169,8 @@ const Dashboard = memo(() => {
     </div>
     <div  style={{textAlign: "center"}}>
     <button className="btn-page" disabled={pageCount == 1? true : false} onClick={() => setPageCount((c) => c - 1)}> &lt;</button>
-    <label>{pageCount}</label>
-    <button className="btn-page" disabled={pageCount >499 ? true : false} onClick={() => setPageCount((c) => c + 1)}
+    <label>{pageCount} / {totalPages}</label>
+    <button className="btn-page" disabled={pageCount >=totalPages ? true : false} onClick={() => setPageCount((c) => c + 1)}
     > &gt;</button>
     </div>
     </Authtemplate>
