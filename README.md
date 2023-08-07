@@ -2,4 +2,4 @@
 DaCodes react fundamentals
 
 link netlyfy:
-https://frabjous-stroopwafel-8f9ec4.netlify.app
+https://jovial-kulfi-5b6fef.netlify.app/

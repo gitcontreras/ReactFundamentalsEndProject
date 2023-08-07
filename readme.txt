@@ -1,1 +1,1 @@
-link netlyfy: https://frabjous-stroopwafel-8f9ec4.netlify.app
+link netlyfy: https://jovial-kulfi-5b6fef.netlify.app/
